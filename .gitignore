@@ -1,0 +1,19 @@
+# Mac/OSX
+.DS_Store
+.cache
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Dependency
+node_modules/
+
+# Logs
+logs
+*.log
