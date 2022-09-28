@@ -21,8 +21,16 @@
   },
   "homepage": "https://github.com/kosalvann/kosalvann#readme",
   "dependencies": {
+    "@handlebars/allow-prototype-access": "^1.0.5",
+    "cors": "^2.8.5",
     "dotenv": "^16.0.2",
     "express": "^4.18.1",
+    "express-handlebars": "^6.0.6",
+    "express-recaptcha": "^5.1.0",
     "nodemon": "^2.0.20"
+  },
+  "devDependencies": {
+    "postcss": "^8.4.14",
+    "postcss-cli": "^9.1.0"
   }
 }
