@@ -1,18 +1,18 @@
-### Description
+## 👋 Hello,  World
+Kosal's personal website at [https://kosalvann.com](https://kosalvann.com)
 
-Kosal's personal website
+## 🪄 Installation
+Clone the repository [kosalvann/kosalvann](https://github.com/kosalvann/kosalvann.git) to your local computer using `git`:
 
-<!--
-**kosalvann/kosalvann** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+```bash
+$ git clone https://github.com/kosalvann/kosalvann.git
+$ cd kosalvann
+```
 
-Here are some ideas to get you started:
+## ⚡️ Run Localhost
+Spin up a Node server locally by running the `npm` commands, then visit this website on your local machine at [http://localhost:3000](http://localhost:3000/):
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+```bash
+$ npm install
+$ npm start
+```

@@ -16,7 +16,7 @@ app.listen(port, () => {
 	console.log(`Server started at port ${port}`);
 });
 
-/** 
+/**
  * @desc Catch-all for non-existing routes and pages
  * @return {string}
  */
