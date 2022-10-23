@@ -1,0 +1,104 @@
+:root {
+	--font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Roboto Mono', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	--white: rgba(255, 255, 255, 1);
+	--black: #242729;
+	--stack-goldenrod: #ffb500;
+	--dark-grey: #535a60;
+	--grey: #9fa6ad;
+	--light-purple: #5f67fa;
+	--dark-purple: #212458;
+}
+
+* {
+	font-family: var(--font-family);
+	color: inherit;
+	line-height: inherit;
+}
+
+*,
+:after,
+:before {
+	box-sizing: border-box;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	box-sizing: border-box;
+}
+
+*::selection {
+	color: var(--white);
+	background-color: var(--light-purple);
+}
+
+a {
+	text-decoration: inherit;
+	color: inherit;
+}
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	flex-direction: column;
+	align-items: stretch;
+	background-color: var(--dark-purple);
+	background-size: 115%;
+	background-image: url('data:image/svg+xml;base64,PHN2ZyBpZD0iYmxvYiIgdmlld0JveD0iMCAwIDEyODAgODAwIiB3aWR0aD0iMTI4MCIgaGVpZ2h0PSI4MDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEyODAiIGhlaWdodD0iODAwIiBmaWxsPSIjMjEyNDU4Ij48L3JlY3Q+CiAgICA8ZGVmcz4KICAgICAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImdyYWQxXzAiIHgxPSIzMy4zJSIgeTE9IjEwMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgICAgICAgICA8c3RvcCBvZmZzZXQ9IjIwJSIgc3RvcC1jb2xvcj0iIzFBMUM0NyIgc3RvcC1vcGFjaXR5PSIxIj48L3N0b3A+CiAgICAgICAgICAgIDxzdG9wIG9mZnNldD0iODAlIiBzdG9wLWNvbG9yPSIjMUExQzQ3IiBzdG9wLW9wYWNpdHk9IjEiPjwvc3RvcD4KICAgICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPC9kZWZzPgogICAgPGRlZnM+CiAgICAgICAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkMV8xIiB4MT0iMzMuMyUiIHkxPSIxMDAlIiB4Mj0iMTAwJSIgeTI9IjAlIj4KICAgICAgICAgICAgPHN0b3Agb2Zmc2V0PSIyMCUiIHN0b3AtY29sb3I9IiMxQTFDNDciIHN0b3Atb3BhY2l0eT0iMSI+PC9zdG9wPgogICAgICAgICAgICA8c3RvcCBvZmZzZXQ9IjgwJSIgc3RvcC1jb2xvcj0iIzIxMjQ1OCIgc3RvcC1vcGFjaXR5PSIxIj48L3N0b3A+CiAgICAgICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDwvZGVmcz4KICAgIDxkZWZzPgogICAgICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZDJfMCIgeDE9IjAlIiB5MT0iMTAwJSIgeDI9IjY2LjclIiB5Mj0iMCUiPgogICAgICAgICAgICA8c3RvcCBvZmZzZXQ9IjIwJSIgc3RvcC1jb2xvcj0iIzFBMUM0NyIgc3RvcC1vcGFjaXR5PSIxIj48L3N0b3A+CiAgICAgICAgICAgIDxzdG9wIG9mZnNldD0iODAlIiBzdG9wLWNvbG9yPSIjMUExQzQ3IiBzdG9wLW9wYWNpdHk9IjEiPjwvc3RvcD4KICAgICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPC9kZWZzPgogICAgPGRlZnM+CiAgICAgICAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkMl8xIiB4MT0iMCUiIHkxPSIxMDAlIiB4Mj0iNjYuNyUiIHkyPSIwJSI+CiAgICAgICAgICAgIDxzdG9wIG9mZnNldD0iMjAlIiBzdG9wLWNvbG9yPSIjMjEyNDU4IiBzdG9wLW9wYWNpdHk9IjEiPjwvc3RvcD4KICAgICAgICAgICAgPHN0b3Agb2Zmc2V0PSI4MCUiIHN0b3AtY29sb3I9IiMxQTFDNDciIHN0b3Atb3BhY2l0eT0iMSI+PC9zdG9wPgogICAgICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8L2RlZnM+CiAgICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMjgwLCA4MDApIj4KICAgICAgICA8cGF0aCBkPSJNLTQzMi43IDBDLTM4OS43IC01NyAtMzQ2LjggLTExNCAtMzE2LjEgLTE4Mi41Qy0yODUuNCAtMjUxIC0yNjcgLTMzMS4xIC0yMTYuMyAtMzc0LjdDLTE2NS43IC00MTguMyAtODIuOCAtNDI1LjUgMCAtNDMyLjdMMCAwWiIgZmlsbD0iIzFkMjA0ZiI+PC9wYXRoPgogICAgICAgIDxwYXRoIGQ9Ik0tMjE2LjMgMEMtMTk0LjkgLTI4LjUgLTE3My40IC01NyAtMTU4IC05MS4zQy0xNDIuNyAtMTI1LjUgLTEzMy41IC0xNjUuNSAtMTA4LjIgLTE4Ny4zQy04Mi44IC0yMDkuMiAtNDEuNCAtMjEyLjcgMCAtMjE2LjNMMCAwWiIgZmlsbD0iIzFBMUM0NyI+PC9wYXRoPgogICAgPC9nPgogICAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCwgMCkiPgogICAgICAgIDxwYXRoIGQ9Ik00MzIuNyAwQzQyNyA4NS41IDQyMS40IDE3MSAzNzQuNyAyMTYuM0MzMjggMjYxLjcgMjQwLjMgMjY2LjggMTcxIDI5Ni4yQzEwMS43IDMyNS41IDUwLjkgMzc5LjEgMCA0MzIuN0wwIDBaIiBmaWxsPSIjMWQyMDRmIj48L3BhdGg+CiAgICAgICAgPHBhdGggZD0iTTIxNi4zIDBDMjEzLjUgNDIuOCAyMTAuNyA4NS41IDE4Ny4zIDEwOC4yQzE2NCAxMzAuOCAxMjAuMSAxMzMuNCA4NS41IDE0OC4xQzUwLjkgMTYyLjggMjUuNCAxODkuNiAwIDIxNi4zTDAgMFoiIGZpbGw9IiMxQTFDNDciPjwvcGF0aD4KICAgIDwvZz4KPC9zdmc+');
+}
+
+body {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+}
+body.not-found {
+	background-image: none;
+}
+
+header,
+main,
+footer {
+	flex-shrink: 0;
+}
+
+.notfound {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+}
+.notfound .face {
+	position: relative;
+	width: 145px;
+}
+
+.notfound .face .eye {
+	position: absolute;
+	width: 32px;
+	height: 32px;
+}
+.notfound .face .eye.left {
+	left: 0;
+}
+.notfound .face .eye.right {
+	right: 0;
+}
+.notfound .face .eye:before,
+.notfound .face .eye:after {
+	position: absolute;
+	left: 15px;
+	content: ' ';
+	height: 33px;
+	width: 8px;
+	background-color: var(--light-purple);
+	border-radius: 10px;
+  }
+  .notfound .face .eye:before {
+	transform: rotate(45deg);
+  }
+  .notfound .face .eye:after {
+	transform: rotate(-45deg);
+  }
