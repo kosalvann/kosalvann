@@ -107,11 +107,9 @@ const handleFormSubmit = async (e) => {
   const url = form.action;
 
   let isNameValid = validateName(),
-      isEmailValid = validateEmail(),
-      isCommentValid = validateComment()
-      isFormValid = isNameValid 
-                    && isEmailValid
-                    && isCommentValid;
+    isEmailValid = validateEmail(),
+    isCommentValid = validateComment();
+  isFormValid = isNameValid && isEmailValid && isCommentValid;
 
   if (isFormValid) {
     const formData = new FormData(form);

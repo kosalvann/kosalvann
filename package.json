@@ -5,7 +5,10 @@
   "main": "app.js",
   "scripts": {
     "start": "nodemon app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "cross-env NODE_ENV=development nodemon src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prettier": "prettier --check **/*.js views/*.hbs public/js/*.js public/css/*.css",
+    "prettier:fix": "prettier --write **/*.js views/*.hbs public/js/*.js public/css/*.css"
   },
   "engines": {
     "node": "^16.17.0"
@@ -27,11 +30,12 @@
     "express-handlebars": "^6.0.6",
     "express-recaptcha": "^5.1.0",
     "hbs": "^4.2.0",
-    "nodemailer": "^6.8.0",
-    "nodemon": "^2.0.20"
+    "nodemailer": "^6.8.0"
   },
   "devDependencies": {
     "postcss": "^8.4.18",
-    "postcss-cli": "^9.1.0"
+    "postcss-cli": "^9.1.0",
+    "prettier": "^2.0.5",
+    "nodemon": "^2.0.20"
   }
 }
