@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{{localeCode}}}">
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -8,12 +8,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="/css/styles.min.css" rel="stylesheet" />
 
-    <meta name="twitter:site" content="{{{social.twitter}}}" />
-    <meta name="twitter:creator" content="{{{social.twitter}}}" />
+    <meta property="og:type" content="website" />
     <meta property="og:url" content="{{{social.url}}}" />
+    <meta property="og:title" content="{{{social.name}}}" />
     <meta property="og:site_name" content="{{{social.name}}}" />
     <meta property="og:description" content="{{{social.description}}}" />
-    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://avatars.githubusercontent.com/u/8780604" />
+    <meta name="twitter:site" content="{{{social.twitter}}}" />
+    <meta name="twitter:creator" content="{{{social.twitter}}}" />
 
   </head>
   <body class="{{bodyClassName}}">

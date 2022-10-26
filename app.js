@@ -3,7 +3,7 @@ const express = require('express');
 const path = require('path');
 const app = express();
 const cors = require('cors')({origin: true});
-const { engine, hbs } = require('express-handlebars');
+const { engine } = require('express-handlebars');
 const routes = require('./routes');
 const port = process.env.PORT || 3000;
 

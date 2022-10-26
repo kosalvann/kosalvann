@@ -11,7 +11,6 @@ router.get("/", async (req, res, next) => {
   res.render("home", {
     lang: translate[`${req.lang}`],
     bodyClassName: "home",
-    social: req.social,
     helpers: {
       parseLang(str) {
         return str.replace(
