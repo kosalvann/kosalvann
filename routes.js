@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const translate = require("./locales");
 
 // Language middleware
 router.use((req, res, next) => {
@@ -12,8 +13,9 @@ router.use((req, res, next) => {
 	res.locals = {
 		localeCode: req.lang,
 		social: { 
-			name: `Kosal Vann, Software Engineer at ActiveCampaign`,
-			description: `My name is Kosal and I'm a software engineer at ActiveCampaign with a discipline in PHP & JavaScript.`,
+			// name: `Kosal Vann, Software Engineer at ActiveCampaign`,
+			name: translate[req.lang].page.title,
+			description: translate[req.lang].page.description,
 			url: `https://kosalvann.com`,
 			twitter: `@kosal__`
 		}
