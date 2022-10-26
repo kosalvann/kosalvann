@@ -5,7 +5,7 @@ const app = express();
 const cors = require('cors')({origin: true});
 const { engine } = require('express-handlebars');
 const routes = require('./routes');
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8080;
 
 app.use(cors);
 app.options('*', cors);
