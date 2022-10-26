@@ -30,12 +30,12 @@
     "express-handlebars": "^6.0.6",
     "express-recaptcha": "^5.1.0",
     "hbs": "^4.2.0",
-    "nodemailer": "^6.8.0"
+    "nodemailer": "^6.8.0",
+    "nodemon": "^2.0.20"
   },
   "devDependencies": {
     "postcss": "^8.4.18",
     "postcss-cli": "^9.1.0",
-    "prettier": "^2.0.5",
-    "nodemon": "^2.0.20"
+    "prettier": "^2.0.5"
   }
 }
