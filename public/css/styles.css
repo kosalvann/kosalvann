@@ -103,12 +103,20 @@ body.home main p {
 body.home main p a {
   position: relative;
   display: inline-block;
+  color: var(--white);
   text-decoration: none;
   direction: ltr;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(to right, var(--light-purple), var(--light-purple) 50%, var(--white) 50%);
+  background-size: 200% 100%;
+  background-position: 100%;
 }
 
 body.home main p a:hover {
   color: var(--light-purple);
+  transition: all 0.25s cubic-bezier(0, 0, 0.25, 1);
+  background-position: 0%;
 }
 
 body.home main p a:hover::before {

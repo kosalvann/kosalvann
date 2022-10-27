@@ -2,23 +2,36 @@ const express = require('express');
 const router = express.Router();
 const translate = require("./locales");
 
-// Language middleware
-router.use((req, res, next) => {
-	const lang = req.acceptsLanguages();
-	// Grab the client language code first two char
-	const locale = lang[0].slice(0, 2);
-	req.lang = (locale) ? locale : 'en';
+const getLocale2CharCode = (langCode) => {
+	const lang = langCode ?? {};
+	// Grab language code first two char
+	const code = lang[0].slice(0, 2);
+	return code ? code : 'en';
+};
 
-	// Global website variables
+router.use((req, res, next) => {
+	/**
+	 * Global variables
+	 * 
+	 * Language middleware
+	 */
+	req.lang = getLocale2CharCode(req.acceptsLanguages());
+	/**
+	 * Social meta
+	 */
+	const socialMetaData = { 
+		name: translate[req.lang].page.title,
+		description: translate[req.lang].page.description,
+		url: `https://kosalvann.com`,
+		twitter: `@kosal__`
+	};
+	/**
+	 * Set the global variables
+	 */
 	res.locals = {
 		localeCode: req.lang,
-		social: { 
-			// name: `Kosal Vann, Software Engineer at ActiveCampaign`,
-			name: translate[req.lang].page.title,
-			description: translate[req.lang].page.description,
-			url: `https://kosalvann.com`,
-			twitter: `@kosal__`
-		}
+		lang: translate[`${req.lang}`],
+		social: socialMetaData
 	}
 
 	next();
