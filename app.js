@@ -34,6 +34,7 @@ app.listen(port, () => {
 app.get('*', (req, res) => {
 	// res.status(404).send('Not found');
 	res.render('404', {
-		bodyClassName: 'not-found'
+		bodyClassName: 'not-found',
+		notFoundPage: true
 	});
 });

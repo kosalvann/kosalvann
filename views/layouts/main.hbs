@@ -7,7 +7,6 @@
     <title>{{{lang.page.title}}}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="/css/styles.min.css" rel="stylesheet" />
-
     <meta property="og:type" content="website" />
     <meta property="og:url" content="{{{social.url}}}" />
     <meta property="og:title" content="{{{social.name}}}" />
@@ -16,16 +15,32 @@
     <meta property="og:image" content="https://avatars.githubusercontent.com/u/8780604" />
     <meta name="twitter:site" content="{{{social.twitter}}}" />
     <meta name="twitter:creator" content="{{{social.twitter}}}" />
-
   </head>
   <body class="{{bodyClassName}}">
-    {{{body}}}
-
+    {{#unless notFoundPage}}
+    <header class="sticky">
+      <button class="drawer" 
+          onmouseenter="toggleIcon(this)" 
+          onmouseleave="toggleIcon(this)"
+        >
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+    </header>
+    {{/unless}}
+    <main>
+      {{{body}}}
+    </main>
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=UA-48666004-2"
     ></script>
     <script>
+
+      function toggleIcon(elem) {
+        elem.firstElementChild.innerText = elem.firstElementChild.innerText !== 'menu' ? 'menu' : 'arrow_back'
+      }
+
+      /** Google Analytics */
       window.dataLayer = window.dataLayer || []; function gtag() {
       dataLayer.push(arguments); } gtag("js", new Date()); gtag('config',
       'UA-48666004-2');

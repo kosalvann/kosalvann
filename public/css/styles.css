@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0&display=swap");
 
 :root {
   /* Font Type */
@@ -49,6 +49,22 @@ a {
   color: inherit;
 }
 
+.flex {
+  display: flex;
+}
+.flex-column {
+  flex-direction: column;
+}
+.flex-row {
+  flex-direction: row;
+}
+.y-center {
+  align-items: center;
+}
+.x-center {
+  justify-content: center;
+}
+
 html,
 body {
   width: 100%;
@@ -80,7 +96,37 @@ footer {
   flex-shrink: 0;
 }
 
-body.home main {
+header.sticky {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  z-index: 10;
+}
+
+header.sticky button.drawer {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  outline: 0;
+  background: 0;
+  border: 0;
+  cursor: pointer;
+  color: var(--white);
+  padding: 20px;
+  margin: 0;
+}
+
+header.sticky button.drawer span[class^="material-symbols"] {
+  padding: 0;
+  margin: 0;
+}
+
+body main {
   margin: auto;
   width: 88%;
   max-width: 800px;
@@ -108,7 +154,12 @@ body.home main p a {
   direction: ltr;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-image: linear-gradient(to right, var(--light-purple), var(--light-purple) 50%, var(--white) 50%);
+  background-image: linear-gradient(
+    to right,
+    var(--light-purple),
+    var(--light-purple) 50%,
+    var(--white) 50%
+  );
   background-size: 200% 100%;
   background-position: 100%;
 }
@@ -135,4 +186,12 @@ body.home main p a::before {
   transform: scaleX(0);
   transform-origin: top left;
   transition: transform 0.25s ease-in-out;
+}
+
+body.not-found * {
+  font-weight: var(--fw-medium);
+}
+
+body.not-found span[class^="material-symbols"] {
+  font-size: 32px;
 }

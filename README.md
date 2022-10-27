@@ -26,7 +26,7 @@ cp env.example .env
 
 ## ⚡️ Run Localhost
 
-Spin up a Node server locally in port `3000` by running the `yarn` commands, then visit [http://localhost:3000](http://localhost:3000/) on your local machine.
+Spin up a Node server locally in port `8080` by running the `yarn` commands, then visit [http://localhost:8080](http://localhost:8080/) on your local machine.
 
 ```bash
 yarn start
