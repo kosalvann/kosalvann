@@ -6,11 +6,40 @@ const cors = require('cors')({origin: true});
 const { engine } = require('express-handlebars');
 const routes = require('./routes');
 const port = process.env.PORT || 8080;
+/** Dependencies */
+const translate = require("./locales");
+const locale2CharCode = require('./helpers/locale2CharCode');
 
 app.use(cors);
 app.options('*', cors);
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+
+// Website middleware
+app.use((req, res, next) => {
+	/**
+	 * Language code
+	 */
+	 req.lang = locale2CharCode(req.acceptsLanguages());
+	 /**
+	  * Social meta
+	  */
+	 const socialMetaData = { 
+		 name: translate[req.lang].page.title,
+		 description: translate[req.lang].page.description,
+		 url: `https://kosalvann.com`,
+		 twitter: `@kosal__`
+	 };
+	 /**
+	  * Set the global variables for views
+	  */
+	 res.locals = {
+		 localeCode: req.lang,
+		 lang: translate[`${req.lang}`],
+		 social: socialMetaData
+	 }
+	next();
+});
 
 // Declare all routes
 app.use('/', routes);

@@ -1,9 +1,9 @@
 module.exports = {
   page: {
-    title: `Kosal Vann, Ingénieur Software @ActiveCampaign`,
-    description: `Salut, je m'appelle Kosal. Je suis ingénieur software chez ActiveCampaign avec une formation en PHP et JavaScript.`,
+    title: `Kosal Vann, ingénieur Logiciel chez @ActiveCampaign`,
+    description: `Bonjour, je m'appelle Kosal. Je suis ingénieur logiciel chez ActiveCampaign avec une discipline en PHP et JavaScript.`,
   },
   home: {
-    body: `Salut, je m'appelle Kosal. Je suis ingénieur software chez ActiveCampaign avec une formation en PHP et JavaScript.`,
+    body: `Bonjour, je m'appelle Kosal. Je suis ingénieur logiciel chez ActiveCampaign avec une discipline en PHP et JavaScript.`,
   },
 };

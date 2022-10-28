@@ -1,0 +1,49 @@
+<section class="drawer" id="drawer-contact" data-drawer-target>
+    <div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+    <div class="drawer__wrapper">
+      <div class="drawer__header">
+        <div class="drawer__title"><h1>Contact Me</h1></div>
+        <button
+          class="drawer__close"
+          data-drawer-close
+          aria-label="Close Drawer"
+        ><span class="material-symbols-outlined">close</span></button>
+      </div>
+      <div class="drawer__content">
+        <section class="notify-success"></section>
+        <form 
+            id="form"
+            action="/contact"
+            enctype="text/plain"
+            onsubmit="return false;">
+          <section>
+            <label for="name">Name</label>
+            <input id="name" type="text" name="name" value="" />
+            <small></small>
+          </section>
+          <section>
+            <label for="email">Email Address</label>
+            <input id="email" type="email" name="email" value="" />
+            <small></small>
+          </section>
+          <section>
+            <label for="comment">Comment</label>
+            <textarea id="comment" name="comment" rows="4" placeholder="Enter your comment"></textarea>
+            <small></small>
+          </section>
+          <section class="gcaptcha">
+            <div class="g-recaptcha" data-sitekey="6LfoAtEhAAAAAJCmJHVSxlyzAtYkovPOSYWCQyDa"></div>
+          </section>
+          <section>
+            <button
+              id="submit"
+              name="submit"
+              type="submit"
+              class="submit-contact"
+            >Submit
+            </button>
+          </section>
+        </form>
+      </div>
+    </div>
+  </section>

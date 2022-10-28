@@ -7,8 +7,8 @@
     "start": "nodemon app.js",
     "dev": "cross-env NODE_ENV=development nodemon src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prettier": "prettier --check **/*.js views/*.hbs public/js/*.js public/css/styles.css",
-    "prettier:fix": "prettier --write **/*.js views/*.hbs public/js/*.js public/css/styles.css",
+    "prettier": "prettier --check **/*.js views/*.hbs public/js/*.js public/css/root.css public/css/styles.css",
+    "prettier:fix": "prettier --write **/*.js views/*.hbs public/js/*.js public/css/root.css public/css/styles.css",
     "css:minify": "csso public/css/styles.css -o public/css/styles.min.css"
   },
   "engines": {

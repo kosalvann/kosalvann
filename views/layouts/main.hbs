@@ -6,7 +6,6 @@
     <link href="/favicon.ico" rel="icon" type="image/x-icon" />
     <title>{{{lang.page.title}}}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="/css/styles.min.css" rel="stylesheet" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="{{{social.url}}}" />
     <meta property="og:title" content="{{{social.name}}}" />
@@ -15,31 +14,36 @@
     <meta property="og:image" content="https://avatars.githubusercontent.com/u/8780604" />
     <meta name="twitter:site" content="{{{social.twitter}}}" />
     <meta name="twitter:creator" content="{{{social.twitter}}}" />
+
+    <link href="/css/styles.min.css" rel="stylesheet" />
   </head>
-  <body class="{{bodyClassName}}">
+  <body class="flex flex-column {{bodyClassName}}">
     {{#unless notFoundPage}}
     <header class="sticky">
       <button class="drawer" 
           onmouseenter="toggleIcon(this)" 
           onmouseleave="toggleIcon(this)"
+          data-drawer-trigger
+          aria-controls="drawer-contact"
+          aria-expanded="false"
+          rel="noopener noreferrer"
         >
         <span class="material-symbols-outlined">menu</span>
       </button>
     </header>
     {{/unless}}
+
     <main>
       {{{body}}}
+      {{#unless notFoundPage}}
+      {{> drawer}}
+      {{/unless}}
     </main>
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=UA-48666004-2"
     ></script>
     <script>
-
-      function toggleIcon(elem) {
-        elem.firstElementChild.innerText = elem.firstElementChild.innerText !== 'menu' ? 'menu' : 'arrow_back'
-      }
-
       /** Google Analytics */
       window.dataLayer = window.dataLayer || []; function gtag() {
       dataLayer.push(arguments); } gtag("js", new Date()); gtag('config',
@@ -49,5 +53,7 @@
       type="text/javascript"
       src="https://www.google.com/recaptcha/api.js?render=6LdmMEsgAAAAAEwNIwFcigE8TG1lc_tG7YPsUaW7"
     ></script>
+    <script type="text/javascript" src="/js/app.js"></script>
+    <script type="text/javascript" src="/js/drawer.js"></script>
   </body>
 </html>

@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0&display=swap");
+
+:root {
+  /* Font Type */
+  --font-family: "Montserrat", Ubuntu, system-ui, -apple-system,
+    BlinkMacSystemFont, Helvetica, sans-serif;
+  /* Colors */
+  --white: #ffffff;
+  --black: #242729;
+  --gray-50: #f5f5f5;
+  --gray-100: #dcdcdc;
+  --gray-200: #c4c4c4;
+  --gray-300: #ababab;
+  --gray-400: #939393;
+  --purple-50: #5f67fa;
+  --purple-100: #555ce1;
+  --purple-200: #4c52c8;
+  --purple-300: #4248af;
+  --purple-400: #393d96;
+  --purple-500: #2f337d;
+  --purple-600: #212458;
+  --red-50: #feeae9;
+  --red-100: #fbc5c2;
+  --red-200: #f8a09b;
+  --red-300: #f57b74;
+  --red-400: #f3564c;
+  --red-500: #f03125;
+  --red-600: #c0271e;
+  /* Font Size */
+  --fs-large: 1.65rem;
+  --fs-medium: 1.25rem;
+  --fs-small: 0.95rem;
+  --fs-xsmall: 0.65rem;
+  /* Font Styles */
+  --fw-normal: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
+  /* Transitions */
+  --transition-all-linear: all 0.25s linear;
+  --transition-transform-ease: transform 0.25s ease-in-out;
+}
