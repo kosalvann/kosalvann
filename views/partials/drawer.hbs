@@ -2,7 +2,7 @@
     <div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
     <div class="drawer__wrapper">
       <div class="drawer__header">
-        <div class="drawer__title"><h1>Contact Me</h1></div>
+        <div class="drawer__title"><h1>{{{lang.contactForm.title}}}</h1></div>
         <button
           class="drawer__close"
           data-drawer-close
@@ -17,18 +17,18 @@
             enctype="text/plain"
             onsubmit="return false;">
           <section>
-            <label for="name">Name</label>
+            <label for="name">{{{lang.contactForm.fieldName.label}}}</label>
             <input id="name" type="text" name="name" value="" />
             <small></small>
           </section>
           <section>
-            <label for="email">Email Address</label>
+            <label for="email">{{{lang.contactForm.fieldEmail.label}}}</label>
             <input id="email" type="email" name="email" value="" />
             <small></small>
           </section>
           <section>
-            <label for="comment">Comment</label>
-            <textarea id="comment" name="comment" rows="4" placeholder="Enter your comment"></textarea>
+            <label for="comment">{{{lang.contactForm.fieldComment.label}}}</label>
+            <textarea id="comment" name="comment" rows="4" placeholder="{{{lang.contactForm.fieldComment.placeholder}}}"></textarea>
             <small></small>
           </section>
           <section class="gcaptcha">
@@ -40,7 +40,7 @@
               name="submit"
               type="submit"
               class="submit-contact"
-            >Submit
+            >{{{lang.contactForm.buttonSubmit}}}
             </button>
           </section>
         </form>

@@ -21,8 +21,8 @@
     {{#unless notFoundPage}}
     <header class="sticky">
       <button class="drawer" 
-          onmouseenter="toggleIcon(this)" 
-          onmouseleave="toggleIcon(this)"
+          onmouseenter="toggleDrawerIcon(this)" 
+          onmouseleave="toggleDrawerIcon(this)"
           data-drawer-trigger
           aria-controls="drawer-contact"
           aria-expanded="false"
@@ -48,12 +48,21 @@
       window.dataLayer = window.dataLayer || []; function gtag() {
       dataLayer.push(arguments); } gtag("js", new Date()); gtag('config',
       'UA-48666004-2');
+
+      // Form messages
+      const formMessage = {
+        name: '{{{lang.contactForm.fieldName.error}}}',
+        email: '{{{lang.contactForm.fieldEmail.error}}}',
+        comment: '{{{lang.contactForm.fieldComment.error}}}',
+        success: '{{{lang.contactForm.successMessage}}}',
+      };
     </script>
     <script
       type="text/javascript"
       src="https://www.google.com/recaptcha/api.js?render=6LdmMEsgAAAAAEwNIwFcigE8TG1lc_tG7YPsUaW7"
     ></script>
     <script type="text/javascript" src="/js/app.js"></script>
+    <script type="text/javascript" src="/js/form.js"></script>
     <script type="text/javascript" src="/js/drawer.js"></script>
   </body>
 </html>

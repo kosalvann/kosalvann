@@ -14,7 +14,7 @@ const validateName = () => {
   const name = nameField.value.trim();
 
   if (!isRequired(name) || !isBetween(name.length, min, max)) {
-    showError(nameField, "Your name is required");
+    showError(nameField, formMessage.name);
   } else {
     showSuccess(nameField);
     valid = true;
@@ -26,7 +26,7 @@ const validateEmail = () => {
   let valid = false;
   const name = emailField.value.trim();
   if (!isRequired(name) || !isEmailValid(name)) {
-    showError(emailField, "Email address is blank or invalid");
+    showError(emailField, formMessage.email);
   } else {
     showSuccess(emailField);
     valid = true;
@@ -47,7 +47,7 @@ const validateComment = () => {
   const name = commentField.value.trim();
 
   if (!isRequired(name) || !isBetween(name.length, min, max)) {
-    showError(commentField, "Please enter some comment");
+    showError(commentField, formMessage.comment);
   } else {
     showSuccess(commentField);
     valid = true;
@@ -68,20 +68,6 @@ const showSuccess = (input) => {
   formField.classList.remove("error");
   const error = formField.querySelector("small");
   error.textContent = "";
-};
-
-const debounce = (fn, delay = 500) => {
-  let timeoutId;
-  return (...args) => {
-    // cancel the previous timer
-    if (timeoutId) {
-      clearTimeout(timeoutId);
-    }
-    // setup a new timer
-    timeoutId = setTimeout(() => {
-      fn.apply(null, args);
-    }, delay);
-  };
 };
 
 form.addEventListener(
@@ -139,7 +125,7 @@ const postFormDataAsJson = async ({ url, formData }) => {
   if (response.ok) {
     form.style.display = "none";
     successBox.style.display = "block";
-    successBox.textContent = "Thanks, your message was sent";
+    successBox.textContent = formMessage.sucess;
     (nameField.value = ""), (emailField.value = ""), (commentField.value = "");
   }
 

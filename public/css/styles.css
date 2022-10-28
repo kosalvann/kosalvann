@@ -177,11 +177,15 @@ section.drawer {
 }
 
 .drawer__header {
-  padding: 1.25rem 1.5rem;
+  padding: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid var(--purple-600);
+}
+
+.drawer__header .drawer__title {
+  padding: 1.5rem;
 }
 
 .drawer__header h1 {
@@ -193,19 +197,20 @@ section.drawer {
 }
 
 .drawer__close {
+  display: inline-flex;
   margin: 0;
-  padding: 0;
+  padding: 1.5rem;
   border: none;
   background-color: transparent;
   cursor: pointer;
-  width: 38px;
-  height: 38px;
   font-size: var(--fs-large);
   color: var(--purple-600);
 }
 
 .drawer__close span[class^="material-symbols"] {
   font-size: var(--fs-large);
+  width: 38px;
+  height: 38px;
 }
 
 .drawer__wrapper {
@@ -261,6 +266,10 @@ section.drawer {
   letter-spacing: 0.015em;
 }
 
+.drawer__content section:last-child label {
+  margin-top: 0;
+}
+
 .drawer__content section input,
 .drawer__content section textarea {
   padding: 0.15rem 0.45rem;
@@ -286,8 +295,7 @@ section.drawer {
 }
 
 .drawer__content section.error small {
-  margin-top: 0.45rem;
-  padding-left: 1.25rem;
+  margin: 0;
   font-size: var(--fs-xsmall);
   color: var(--red-500);
 }
@@ -313,7 +321,6 @@ section.drawer {
 
 .drawer__content .notify-success {
   display: none;
-  padding: 1rem;
 }
 
 .drawer.is-active {
