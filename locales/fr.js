@@ -4,6 +4,6 @@ module.exports = {
     description: `Bonjour, je m'appelle Kosal. Je suis ingénieur logiciel chez ActiveCampaign avec une discipline en PHP et JavaScript.`,
   },
   home: {
-    body: `Bonjour, je m'appelle Kosal. Je suis ingénieur logiciel chez ActiveCampaign avec une discipline en PHP et JavaScript.`,
+    body: `Bonjour, je m'appelle Kosal. Je suis ingénieur logiciel chez ActiveCampaign avec une discipline de PHP et JavaScript.`,
   },
 };

@@ -185,7 +185,7 @@ section.drawer {
 }
 
 .drawer__header .drawer__title {
-  padding: 1.5rem;
+  padding: 1rem 2.5rem;
 }
 
 .drawer__header h1 {
@@ -193,24 +193,22 @@ section.drawer {
   font-family: var(--font-family);
   font-size: var(--fs-large);
   font-weight: var(--fw-medium);
-  color: var(--purple-600);
+  color: var(--white);
 }
 
 .drawer__close {
   display: inline-flex;
   margin: 0;
-  padding: 1.5rem;
+  padding: 1rem 1.5rem;
   border: none;
   background-color: transparent;
   cursor: pointer;
   font-size: var(--fs-large);
-  color: var(--purple-600);
+  color: var(--white);
 }
 
 .drawer__close span[class^="material-symbols"] {
   font-size: var(--fs-large);
-  width: 38px;
-  height: 38px;
 }
 
 .drawer__wrapper {
@@ -220,18 +218,17 @@ section.drawer {
   bottom: 0;
   height: 100%;
   width: 100%;
-  max-width: 500px;
+  max-width: 550px;
   z-index: 9999;
   overflow: auto;
   transition: transform 0.15s;
   will-change: transform;
-  background-color: var(--white);
+  background-color: var(--purple-600);
   display: flex;
   flex-direction: column;
   -webkit-transform: translateX(103%);
   transform: translateX(103%);
   -webkit-overflow-scrolling: touch;
-  box-shadow: 0 2px 6px var(--purple-600);
 }
 
 .drawer__content {
@@ -240,13 +237,13 @@ section.drawer {
   overflow-y: auto;
   height: 100%;
   flex-grow: 1;
-  padding: 1.5rem;
+  padding: 2.5rem;
 }
 
 .drawer__content * {
   font-family: var(--font-family);
   font-size: var(--fs-medium);
-  color: var(--purple-600);
+  color: var(--white);
 }
 
 .drawer__content section {
@@ -266,7 +263,7 @@ section.drawer {
   letter-spacing: 0.015em;
 }
 
-.drawer__content section:last-child label {
+.drawer__content section:first-child label {
   margin-top: 0;
 }
 
@@ -275,23 +272,21 @@ section.drawer {
   padding: 0.15rem 0.45rem;
   width: 100%;
   border-radius: 3px;
-  border: 1px solid var(--gray-200);
+  border: 1px solid #1e2433;
   transition: all 0.2s;
   font-size: var(--fs-small);
+  background-color: #1e2433;
 }
 
 .drawer__content section input:focus,
 .drawer__content section textarea:focus {
-  outline: var(--purple-600);
-  border: 1px solid var(--purple-500);
-  background-color: var(--white);
+  outline: 0 none;
 }
 
 .drawer__content section.error input,
 .drawer__content section.error textarea {
   outline: var(--red-500);
   border: 1px solid var(--red-500);
-  background-color: var(--red-50);
 }
 
 .drawer__content section.error small {
@@ -302,9 +297,9 @@ section.drawer {
 
 .drawer__content section button.submit-contact {
   position: relative;
-  padding: 0.6rem 3rem 0.6rem 1.5rem;
-  border-radius: 3px;
-  background-color: var(--purple-600);
+  padding: 0.6rem 3.88rem 0.6rem 1.5rem;
+  border-radius: 50px;
+  background-color: var(--purple-50);
   border: 0 none;
   color: var(--white);
   cursor: pointer;
@@ -316,11 +311,12 @@ section.drawer {
 }
 
 .drawer__content section button.submit-contact:hover {
-  padding-right: 3.88rem;
+  padding-right: 4.35rem;
 }
 
 .drawer__content .notify-success {
   display: none;
+  font-size: var(--fs-medium);
 }
 
 .drawer.is-active {

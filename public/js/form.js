@@ -107,6 +107,7 @@ const handleFormSubmit = async (e) => {
 const postFormDataAsJson = async ({ url, formData }) => {
   const plainFormData = Object.fromEntries(formData.entries());
   const formDataJsonString = JSON.stringify(plainFormData);
+  let formTitleText = document.querySelector(".drawer__title h1").textContent;
 
   const fetchOptions = {
     method: "POST",
@@ -118,14 +119,17 @@ const postFormDataAsJson = async ({ url, formData }) => {
   };
 
   const response = await fetch(url, fetchOptions);
+
   if (!response.ok) {
     const errorMessage = await response.text();
     throw new Error(errorMessage);
   }
+
   if (response.ok) {
     form.style.display = "none";
     successBox.style.display = "block";
-    successBox.textContent = formMessage.sucess;
+    successBox.textContent = formMessage.success;
+    formTitleText.innerHTML = formMessage.successTitle;
     (nameField.value = ""), (emailField.value = ""), (commentField.value = "");
   }
 

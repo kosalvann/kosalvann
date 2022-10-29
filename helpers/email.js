@@ -7,18 +7,25 @@ const htmlMarkup = () => {
     `&mdash;&mdash;&mdash;&mdash;<br>` +
     `Name: %NAME%<br>` +
     `Email: %EMAIL%<br><br>` +
-    `Comment:<br>%COMMENT%`
+    `Comment:<br>%COMMENT%<br><br><br><br>` +
+    `USER AGENT:<br>%AGENT%<br><br>`
   );
 };
 
 /**
  * @desc Handle the contact form submission
+ * @param string name    The name of the submitter
+ * @param string email   The email of the submitter
+ * @param string comment The comment made by the submitter
+ * @param string geo     The submitter user agent details
+ * @return void
  */
-const sendEmail = (name, email, comment) => {
+const sendEmail = (name, email, comment, geo) => {
   const htmlEmail = htmlMarkup()
     .replace(/%NAME%/g, name)
     .replace(/%EMAIL%/g, email)
-    .replace(/%COMMENT%/g, comment);
+    .replace(/%COMMENT%/g, comment)
+    .replace(/%AGENT%/g, geo);
 
   /** @desc Send email */
   emailClient(

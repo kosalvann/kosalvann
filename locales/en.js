@@ -22,7 +22,7 @@ module.exports = {
       error: `Please enter some comment`,
     },
     buttonSubmit: `Submit`,
-    successMessage: `Thanks, your message was sent`,
-    errorMessage: ``,
+    successMessageTitle: `Thank You`,
+    successMessage: `Your message was sent`,
   },
 };
