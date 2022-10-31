@@ -59,6 +59,7 @@ var drawer = function () {
     target.classList.add(settings.activeClass);
     // Make body overflow hidden so it's not scrollable
     document.documentElement.style.overflow = "hidden";
+    document.querySelector('section.bio').style.cssText = "filter: blur(0.15rem);";
     // Toggle accessibility
     toggleccessibility(trigger);
     // Make it visible
@@ -77,6 +78,7 @@ var drawer = function () {
     closestParent.classList.remove(settings.visibleClass);
     // Remove body overflow hidden
     document.documentElement.style.overflow = "";
+    document.querySelector('section.bio').removeAttribute("style");
     // Toggle accessibility
     toggleccessibility(childrenTrigger);
     // Make it not active
