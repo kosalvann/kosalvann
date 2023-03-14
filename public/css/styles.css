@@ -414,3 +414,9 @@ section.drawer {
 .drawer__content section.gcaptcha {
   margin-top: 1.5rem;
 }
+
+@media only screen and (max-width: 768px) {
+  html, body {
+    background-size: 300%;
+  }
+}
