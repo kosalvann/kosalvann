@@ -296,6 +296,9 @@ section.drawer {
 }
 
 .drawer__content section button.submit-contact {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
   position: relative;
   padding: 0.6rem 3.88rem 0.6rem 1.5rem;
   border-radius: 50px;
@@ -307,11 +310,69 @@ section.drawer {
   background-repeat: no-repeat;
   background-position: 85% center;
   background-size: 28px;
-  transition: all 0.2s;
+  -webkit-transition: all 0.15s ease;
+  -moz-transition: all 0.15s ease;
+  -o-transition: all 0.15s ease;
+  transition: all 0.15s ease;
+  transform: translateY(-50%);
 }
 
 .drawer__content section button.submit-contact:hover {
   padding-right: 4.35rem;
+}
+
+.drawer__content section button.submit-contact[disabled="disabled"] {
+  padding-right: 38px;
+  background-color: var(--gray-400);
+  background-image: none;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+.drawer__content section button.submit-contact .loader,
+.drawer__content section button.submit-contact .loader:after {
+  width: 18px;
+  height: 18px;
+}
+
+.loader {
+  left: 15px;
+  display: inline-block;
+  margin: 0 auto;
+  padding: 2px;
+  font-size: 2px;
+  position: relative;
+  text-indent: -9999em;
+  border-radius: 100%;
+  border: 1em solid rgba(255, 255, 255, 0.1);
+  border-left: 1em solid rgba(255, 255, 255, 0.2);
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation: spincycle 0.8s infinite linear;
+  animation: spincycle 0.8s infinite linear;
+  vertical-align: middle;
+}
+
+@-webkit-keyframes spincycle {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spincycle {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }
 
 .drawer__content .notify-success {

@@ -32,6 +32,7 @@
     "express-recaptcha": "^5.1.0",
     "geoip-lite": "^1.4.6",
     "hbs": "^4.2.0",
+    "node": "^19.6.1",
     "nodemailer": "^6.8.0",
     "nodemon": "^2.0.20"
   },
